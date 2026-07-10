@@ -3,7 +3,8 @@
 anthropic==0.35.0
 python-dotenv==1.0.1
 pandas==2.2.0
-numpy==1.26.0
+numpy<2
 matplotlib==3.8.0
 scikit-learn==1.4.0
 wordcloud==1.9.3
+seaborn==0.13.0
