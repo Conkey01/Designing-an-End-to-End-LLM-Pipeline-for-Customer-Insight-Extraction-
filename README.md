@@ -12,20 +12,20 @@ This pipeline takes 5,000 customer feedback comments and produces:
 
 ## Quick Start
 
+# Setup Instructions
+
+## Local Setup
+
 ### Prerequisites
 - Python 3.8+
-- API key for Anthropic-compatible endpoint (provided separately)
+- Git
 
-### Installation
+### Quick Setup
 
 ```bash
 # Clone repository
 git clone https://github.com/chattermill/llm-challenge.git
 cd llm-challenge
 
-# Install dependencies
-pip install -r requirements.txt
-
-# Set up environment variables
-export ANTHROPIC_API_KEY="sk-..."
-export ANTHROPIC_BASE_URL="https://llm-api.datascience.chattermill.xyz/anthropic"
+# Run setup script
+python setup.py
