@@ -24,8 +24,8 @@ This pipeline takes 5,000 customer feedback comments and produces:
 
 ```bash
 # Clone repository
-git clone https://github.com/chattermill/llm-challenge.git
-cd llm-challenge
+git clone https://github.com/Conkey01/Designing-an-End-to-End-LLM-Pipeline-for-Customer-Insight-Extraction-.git
+cd Designing-an-End-to-End-LLM-Pipeline-for-Customer-Insight-Extraction-/llm-challenge
 
 # Run setup script
 python setup.py
