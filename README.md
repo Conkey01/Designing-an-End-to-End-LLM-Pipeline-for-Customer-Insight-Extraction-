@@ -29,3 +29,5 @@ cd Designing-an-End-to-End-LLM-Pipeline-for-Customer-Insight-Extraction-/llm-cha
 
 # Run setup script
 python setup.py
+
+# Enter your API key (the one given to me in the email)
