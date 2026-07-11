@@ -10,35 +10,62 @@ This pipeline takes 5,000 customer feedback comments and produces:
 3. **Theme Mapping** - Mapped to the provided category/theme hierarchy
 4. **Quality Evaluation** - Comprehensive metrics and analysis
 
-## Quick Start
+---
 
-# Setup Instructions
+# Installation
 
-## Local Setup
+## Prerequisites
 
-### Prerequisites
 - Python 3.8+
 - Git
 
-### Quick Setup
+## Quick Setup
 
 ```bash
 # Clone repository
 git clone https://github.com/Conkey01/Designing-an-End-to-End-LLM-Pipeline-for-Customer-Insight-Extraction-.git
 cd Designing-an-End-to-End-LLM-Pipeline-for-Customer-Insight-Extraction-/llm-challenge
 
-# Run setup script
+# Install dependencies
 python setup.py
 
-# Next enter your API key
+# Enter your API key when prompted
 
-# Run load data script
+# Download and prepare the dataset
 python load_data.py
+```
 
-### 1. Extraction
+---
+
+# Running the Pipeline
+
+## 1. Aspect Extraction
 
 ```bash
-# Run the extraction step:
-python src/extract.py --test # Test that it works on 10 comments
-python src/extract.py --full # Run the extraction pipeline on all the comments
-python src/extract.py # Run both the test and the full extraction
+# Test on 10 comments
+python src/extract.py --test
+
+# Run on the full dataset
+python src/extract.py --full
+
+# Run both the test and full pipeline
+python src/extract.py
+```
+
+## 2. Clustering
+
+```bash
+python src/cluster.py
+```
+
+## 3. Theme Mapping
+
+```bash
+python src/map.py
+```
+
+## 4. Evaluation
+
+```bash
+python src/evaluate.py
+```
