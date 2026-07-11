@@ -35,6 +35,9 @@ python setup.py
 # Run load data script
 python load_data.py
 
+### 1. Extraction
+
+```bash
 # Run the extraction step:
 python src/extract.py --test # Test that it works on 10 comments
 python src/extract.py --full # Run the extraction pipeline on all the comments
