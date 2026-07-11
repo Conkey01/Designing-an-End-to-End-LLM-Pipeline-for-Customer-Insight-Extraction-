@@ -30,4 +30,12 @@ cd Designing-an-End-to-End-LLM-Pipeline-for-Customer-Insight-Extraction-/llm-cha
 # Run setup script
 python setup.py
 
-# Next enter your API key (the one given to me in the email)
+# Next enter your API key
+
+# Run load data script
+python load_data.py
+
+# Run the extraction step:
+python src/extract.py --test # Test that it works on 10 comments
+python src/extract.py --full # Run the extraction pipeline on all the comments
+python src/extract.py # Run both the test and the full extraction
