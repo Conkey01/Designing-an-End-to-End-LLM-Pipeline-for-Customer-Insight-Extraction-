@@ -79,14 +79,3 @@ python src/map.py
 ```bash
 python src/evaluate.py
 ```
-
-outputs/
-├── 01_extraction_results.json          # All extracted aspects
-├── 01_extraction_summary.json          # Extraction statistics
-├── 02_clustering_results.json          # Cluster assignments
-├── 02_insights.json                    # Human-readable insights
-├── 02_clustering_evaluation.json       # Clustering metrics
-├── 03_mappings.json                    # Theme mappings
-├── 03_mapping_evaluation.json          # Mapping quality metrics
-├── 03_mapping_summary.json             # Quick reference
-└── 04_pipeline_evaluation.json         # Overall evaluation
