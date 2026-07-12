@@ -176,3 +176,54 @@ Key Strengths:
 
    
 ## 2. Clustering
+
+## Methods 
+
+We input the aspects we extracted from the previous step and generate emeddings using sentence-transformers. Effectively converting each aspect to a 384-dimensional vector. We find optimal number of clusters for K-means clustering by running the algorithm for every possible k between 3 to 50 and picking the k with the highest silhouette score which we get as k=38. Each aspect is then assigned a cluster 0-37 and then we can generate insights for each cluster.
+
+## Evaluation
+
+For clustering we can evaluate the specific algorithm we have chosen which was k-means. While k-means is free, very fast and very interpretable, the silhouette score we got was very poor even for the best model. Given the data we have I think now an algorithm that has soft clustering is a better choice. K-means does not handle overlapping clusters very well and I think with the aspects we have some of them are very similar/practically the same thing especially when we have so many clusters some of them are very closely linked and will have some overlap. So I think to improve the pipeline and improve the clusters we should use a soft clustering method (like GMMs etc.) instead that gives probabilities that each comment belongs to a cluster rather than it just being fixed on one cluster because aspects can be part of multiple clusters in the task and with the data we have. So with more time I would change the clustering method. 
+
+The silhouette score can tell us how well seperated the clusters are whereas the Davies-Bouldin Score can tell us how compact the clusters are and we use this to measure performance too.
+
+We can also look at the cluster distributions and see how many instances are in each cluster, how many are in the largest and smallest clusters and hope that the range between these is not too large and that we have well balanced clusters. We want aspects to be distributed meaningfully and not lots of them being cluster into the same clusters leaving very small and very large cluster shapes.
+
+We can also make sure the clusters actually make sense, do clustered aspects actually belong together? (are they all about the same thing?). Do they all have a clear theme and are not randomly grouped?
+
+Do clusters have dominant sentiments? If clusters are mainly of positive or negative aspects instead of the other then that can be a good sign that the clusters have grouped together well.
+
+We can also look at the percentage of aspects that were clustered successfully.
+
+Finally something I have not done but could be done is to actually measure how good the embeddings are aswell do these capture the patterns and semantic relationships in the data well. We could do this by using dimensionality reduction techniques (like PCA, t-SNE etc.) and visualise whether similar aspects cluster together in the embeddings spaces. We could visualise our clusters in these spaces to see how well we have clustered the data and to see the overlap of clusters we think should be there a bit more.
+
+
+## Results
+
+Run the following to get the evaluation metrics mentioned:
+
+```bash
+python src/evaluate_clustering.py
+```
+
+It will save the results to the outputs/02_clustering_evaluation_detailed.json file 
+
+Here is a small summary of the results for this section:
+
+Key Strengths:
+
+  Silhouette 0.0657 (FAIR, expected for customer feedback with overlapping topics)
+  
+  Davies-Bouldin 3.16 (FAIR, consistent with silhouette)
+  
+  Cluster size ratio 7.4x (GOOD, well-balanced)
+  
+  Mean sentiment coherence 75%+ (GOOD, clear dominant sentiments)
+  
+  100% coverage (EXCELLENT, all aspects clustered)
+  
+  100% interpretability (EXCELLENT, all clusters have names)
+  
+  Fast computation (EXCELLENT, 2.5 minutes total)
+  
+  Low cost (EXCELLENT, \$0.07 for insights)
