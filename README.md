@@ -36,6 +36,48 @@ python load_data.py
 ```
 
 ---
+## List of all files
+
+Initial files:
+From the llm-challenge:
+themes.json
+data/feedback.csv
+README.md 
+
+Files I created:
+For analysis (always good practice to understand, plot and calculate simple metrics of the data at each stage of the pipeline):
+notebooks/01_data_exploration.ipynb - analysis of the original comment data 
+notebooks/02_extraction_analysis.ipynb - analysis of the data after the extraction step
+notebooks/03_clustering_analysis.ipynb - analysis of the data after the clustering step
+
+README.md - this readme file 
+requirements.txt - list of all depenedencies and versions needed 
+setup.py - run the set up code
+load_data.py - download and prepare the dataset
+
+src folder contains all python scripts to run steps 1-3 and the evaluations at each stage 
+src/extract.py - to do the extraction step
+src/cluster.py - to do the cluster step
+src/evaluate_extraction.py - to evaluate the extraction step
+src/evaluate_clustering.py - to evaluate the clustering step
+
+outputs:
+outputs/00_data_summary.json - summary stats of the original data
+outputs/01_length_distribution.png - analysis of the original data
+outputs/02_sentiment_distribution.png - analysis of the original data
+outputs/03_top_terms_tfidf.png - analysis of the original data
+outputs/phase0_sample_20comments.csv - sample of 20 random comments
+outputs/01_extraction_results.json - results of the extraction step
+outputs/01_extraction_results.jsonl - results of the extraction step
+outputs/02_clustering_evaluation.json - evaluation results of the clustering step
+outputs/02_clustering_results.json - results of the clustering step
+outputs/02_insights.json - summary of all the clusters from the clustering step
+outputs/cluster_sentiment_composition.png - analysis of the data after clustering
+outputs/cluster_sizes_bar_chart.png - analysis of the data after clustering
+outputs/01_extraction_evaluation.json - evaluation results after the extraction step
+outputs/02_clustering_evaluation_detailed.json - evaluation results of the clustering step
+
+
 
 # Running the Pipeline
 
