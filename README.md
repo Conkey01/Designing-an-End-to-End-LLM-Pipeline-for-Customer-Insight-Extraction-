@@ -83,6 +83,9 @@ python src/evaluate.py
 # Methods/Evaluation
 
 ## 1. Extraction
+
+## Methods
+
 We input raw customer comments and send it to Claude Haiku with the below structured prompt:
 "You are an expert at extracting structured insights from customer feedback.
 
@@ -122,6 +125,8 @@ COMMENT TO ANALYZE:
 
 Respond ONLY with valid JSON."
 
+## Evaluation
+
 This is supposed to extract aspects, sentiment and confidence. The output is JSON with structured aspects. 
 This gave good extractions for a low cost rather than using human annotation or finetuning a large model which could cost more than the 20 dollar API budget. It's also better than using a heuristic/Regex/rule-based approach which is not scalable/fast enough for our needs. Claude Haiku has the right balance between cost and model performance compared to GPT-4/open source LLMs for example.
 The model scaled well and was relatively fast in processing the 5k comments, no need for finetuning and we used batched processing to handle the cost and size of the data. 
@@ -141,6 +146,8 @@ We can also track whether similar comments give similar/the same aspects to see 
 
 Finally we can also track the false positive rate which we want to be low as these would introduce noise and won't help clustering. For example if our comment says I am happy with the service then a false positive would be the extraction saying issues with the service and we don't want that.
 
+## Results
+
 Run the following to get the evaluation metrics mentioned:
 
 ```bash
@@ -157,3 +164,6 @@ Key Strengths:
    55% negative, 31% positive (realistic distribution)
    52% redundancy (strong patterns)
    \$0.0003 per aspect (excellent value)
+
+   
+## 2. Clustering
