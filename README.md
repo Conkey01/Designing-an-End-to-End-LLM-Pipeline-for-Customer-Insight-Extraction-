@@ -79,3 +79,81 @@ python src/map.py
 ```bash
 python src/evaluate.py
 ```
+
+# Methods/Evaluation
+
+## 1. Extraction
+We input raw customer comments and send it to Claude Haiku with the below structured prompt:
+"You are an expert at extracting structured insights from customer feedback.
+
+TASK: Extract specific aspects (topics, issues, features) mentioned in this customer comment along with the sentiment expressed towards each aspect.
+
+IMPORTANT GUIDELINES:
+1. Aspects should be GRANULAR and SPECIFIC (not high-level categories like "app" or "service")
+   - GOOD: "App login speed", "Sign-up process complexity", "Push notification frequency"
+   - BAD: "App experience", "Service", "Features"
+
+2. Extract aspects that are EXPLICITLY or CLEARLY IMPLIED in the text
+   - Do not invent aspects not mentioned
+   - Include implicit aspects if they're reasonably inferred from context
+
+3. Sentiment should be: "positive", "negative", or "neutral"
+   - Evaluate sentiment TOWARDS THAT SPECIFIC ASPECT, not overall
+   - Handle mixed sentiments per aspect if needed
+
+4. Include an evidence snippet from the comment supporting each aspect
+
+5. Confidence score should reflect how certain you are about this extraction (0.0-1.0)
+
+OUTPUT FORMAT (JSON only, no other text):
+{{
+  "aspects": [
+    {{
+      "aspect": "<specific aspect name>",
+      "sentiment": "<positive|negative|neutral>",
+      "evidence": "<relevant quote from comment>",
+      "confidence": <0.0-1.0>
+    }}
+  ]
+}}
+
+COMMENT TO ANALYZE:
+{comment}
+
+Respond ONLY with valid JSON."
+
+This is supposed to extract aspects, sentiment and confidence. The output is JSON with structured aspects. 
+This gave good extractions for a low cost rather than using human annotation or finetuning a large model which could cost more than the 20 dollar API budget. It's also better than using a heuristic/Regex/rule-based approach which is not scalable/fast enough for our needs. Claude Haiku has the right balance between cost and model performance compared to GPT-4/open source LLMs for example.
+The model scaled well and was relatively fast in processing the 5k comments, no need for finetuning and we used batched processing to handle the cost and size of the data. 
+We have a JSON output format that we can parse reliably.
+
+We measure good extraction firstly through the success rate of how many comments we were able to extract information from in total. If we are only able to extract information from a low percentage of them then we have wasted our API budget. We also get around this by first testing the extraction step on a small subset of the comments to make sure the pipeline is working before we waste our budget on a pipeline that does not work.
+
+A second way to measure good extraction is the confidence scores we prompt the LLM to give us for each aspect which tell us which aspects to trust. If needed we could filter out low confidence aspects. A low confidence score <0.5 can tell us which are unreliable whereas a high score ~1 can tell us which are high quality. We can aggregate a comments confidence scores by taking the mean/median of each aspects confidence score associated with that comment. If 80% of aspects are of a high quality say >0.8 then we can say around 8 in 10 aspects are of a high quality. 
+
+We can also measure the number of aspects per comment. We can take the average aspects per comment, between around 3-5 gives good granularity, whereas a high average could suggest we are over extracting and we are picking up to much noise. A low average could suggest we are missing too much detail and we have very sparse comments. 
+
+We can also look at the sentiment distribution, looking at the percentage of aspects that are positive, negative or neutral. If they are too heavy tailed to one of them then they could be biased, too many positive reviews could suggest they are fake/filtered reviews or too many negatives then they could be from a complaints forum. We would expect a natural mix of sentiments and might be suspicious if they are heavy swayed to one class.
+
+We can also measure how many aspects are unique/duplicates. If there is a lot of duplicates then themes are consistent and it is a good sign that clustering will work well. A lot of unique aspects could show that the model is picking up a lot of noise and there is many patterns in the data which could hinder clustering in the next step. 
+
+We can also track whether similar comments give similar/the same aspects to see whether the extraction remains consistent between comments which again can show that clustering would work well as we would expect similar aspects to group together. 
+
+Finally we can also track the false positive rate which we want to be low as these would introduce noise and won't help clustering. For example if our comment says I am happy with the service then a false positive would be the extraction saying issues with the service and we don't want that.
+
+Run the following to get the evaluation metrics mentioned:
+
+```bash
+python src/evaluate_extraction.py
+```
+
+It will save the results to the outputs/01_extraction_evaluation.json file 
+
+Here is a small summary of the results for this section:
+Key Strengths:
+   98.5% success rate (very reliable)
+   0.847 mean confidence (high quality aspects)
+   4.07 aspects per comment (good granularity)
+   55% negative, 31% positive (realistic distribution)
+   52% redundancy (strong patterns)
+   \$0.0003 per aspect (excellent value)
