@@ -55,7 +55,17 @@ python src/extract.py
 ## 2. Clustering
 
 ```bash
-python src/cluster.py
+# Test on 10-20% of data
+python src/cluster.py --test
+
+# Test with visualization
+python src/cluster.py --test --viz
+
+# Full clustering pipeline
+python src/cluster.py --full
+
+# Analyze existing results
+python src/cluster.py --analyze 
 ```
 
 ## 3. Theme Mapping
