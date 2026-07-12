@@ -172,5 +172,7 @@ Key Strengths:
    
    \$0.0003 per aspect (excellent value)
 
+   The extraction results are saved to the outputs/01_extraction_results.json file 
+
    
 ## 2. Clustering
