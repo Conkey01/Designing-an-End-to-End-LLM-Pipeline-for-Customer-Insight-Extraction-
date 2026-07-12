@@ -227,3 +227,13 @@ Key Strengths:
   Fast computation (EXCELLENT, 2.5 minutes total)
   
   Low cost (EXCELLENT, \$0.07 for insights)
+
+## 3. Mapping
+
+## Methods 
+
+## Evaluation
+
+
+## Results
+
