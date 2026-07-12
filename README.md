@@ -159,10 +159,15 @@ It will save the results to the outputs/01_extraction_evaluation.json file
 Here is a small summary of the results for this section:
 Key Strengths:
    98.5% success rate (very reliable)
+   
    0.847 mean confidence (high quality aspects)
+   
    4.07 aspects per comment (good granularity)
+   
    55% negative, 31% positive (realistic distribution)
+   
    52% redundancy (strong patterns)
+   
    \$0.0003 per aspect (excellent value)
 
    
