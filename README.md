@@ -169,7 +169,14 @@ python src/map.py --evaluate
 ## 4. Evaluation
 
 ```bash
-python src/evaluate.py
+# Evaluation for the extraction step
+python src/evaluate_extraction.py
+
+# Evaluation for the clustering step
+python src/evaluate_clustering.py
+
+# Evaluation for the mapping step
+python src/evaluate_mapping.py
 ```
 
 # Methods/Evaluation
