@@ -136,6 +136,17 @@ python src/extract.py --full
 python src/extract.py
 ```
 
+## Quick note on running the cluster script 
+I ran into some dependencies issues myself when rerunning the cluster script so I created a conda environment: (run this if the cluster script does not work):
+```bash
+# Create environment 
+conda create -n chattermill python=3.10
+conda activate chattermill
+# Install everything
+pip install -r requirements.txt
+pip install "anthropic>=0.58"
+```
+
 ## 2. Clustering
 
 ```bash
