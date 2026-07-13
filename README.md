@@ -335,6 +335,21 @@ For this task we can make a choice between using LLMs or semantic similarity or 
 ## Evaluation
 A combination of semantic similarity and LLMs is fast, interpretable and cost efficient compared to finrtuning a large model/human annotation or a rule based/heuristic approach. The cost is now low because we are dealing with small numbers of clusters aswell rather than 5k comments 
 
+One way to measure performance here is to check the confidence scores to see how sure Claude is about each mapping and if it can clearly identify best themes.
+
+We can also check how many of the themes we used. If we only used few themes then it could mean they were too specific or it could tell us that customers are just never bothered enough to leave a review from a certain theme/topic
+
+We want to also see if the mappings are evenly distributed. If all the clusters map to the same theme then the results would be suspicious. A balanced distribution means we have more realistic customer feedback.
+
+We can also measure confidence scores for each mapping and check any that are low.
+
+We also similar clusters mapping to similar themes, we can manually check this to see if their is any randomness in the mappings.
+
+When choosing between the top-3 themes, does Claude pick a clear favourite (is their a big increase in the similarity score for the most similar to the second most?). We want situations where their is a clear favourite mapping and not close calls that could easily have gone to a different mapping.
+
+Sometimes even common sense can come into it when evaluating these results like do the mappings actually make sense in the real world. For example if pricing issues gets mapped to response time then obviously that does not make sense.
+
+Finally evaluating the cost factor too which I have been monitoring and it was very low even when using just the Claude LLM without any semantic similarity, possibily because now we are only dealing with small number of clusters instead of 5k comments. 
 
 ## Results
 
