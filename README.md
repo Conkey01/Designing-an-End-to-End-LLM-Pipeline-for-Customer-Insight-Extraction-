@@ -119,6 +119,8 @@ outputs/03_theme_distribution.json - results of the mappings step
 
 outputs/03_mapping_results.json - results of the mappings step
 
+outputs/03_mapping_evaluation_detailed.json - evaluation results of the maapping step
+
 # Running the Pipeline
 
 ## 1. Aspect Extraction
