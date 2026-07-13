@@ -1,0 +1,44 @@
+{
+  "themes": [
+    {
+      "category": "Account Management",
+      "themes": [
+        "Account Access",
+        "Account Settings",
+        "Cards & Payments"
+      ]
+    },
+    {
+      "category": "Online Experience",
+      "themes": [
+        "App Performance",
+        "Updates & Versions",
+        "Navigation & Design"
+      ]
+    },
+    {
+      "category": "Customer Service",
+      "themes": [
+        "Response Time",
+        "Issue Resolution",
+        "Staff Behaviour"
+      ]
+    },
+    {
+      "category": "Product & Features",
+      "themes": [
+        "Core Banking Features",
+        "New Features",
+        "Integrations"
+      ]
+    },
+    {
+      "category": "Company & Brand",
+      "themes": [
+        "General Satisfaction",
+        "Trust & Security",
+        "Pricing & Fees"
+      ]
+    }
+  ]
+}

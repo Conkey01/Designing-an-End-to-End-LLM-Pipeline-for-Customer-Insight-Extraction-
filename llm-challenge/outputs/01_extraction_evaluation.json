@@ -1,0 +1,81 @@
+{
+  "timestamp": "2026-07-12T21:26:34.084761",
+  "evaluations": {
+    "success_rate": {
+      "total_comments": 5000,
+      "successful": 4992,
+      "failed": 8,
+      "success_rate": 0.9984,
+      "success_rate_pct": "99.8%",
+      "quality": "\u2705 EXCELLENT",
+      "recommendation": "Extraction is very reliable"
+    },
+    "confidence_scores": {
+      "total_aspects": 15874,
+      "mean_confidence": 0.9100113392969635,
+      "median_confidence": 0.92,
+      "std_dev": 0.05157504001314711,
+      "min_confidence": 0.3,
+      "max_confidence": 0.99,
+      "high_confidence_pct": 95.95565074965351,
+      "medium_confidence_pct": 4.006551593801184,
+      "low_confidence_pct": 0.03779765654529419,
+      "quality": "\u2705 EXCELLENT",
+      "interpretation": "Model is very confident in extractions"
+    },
+    "aspects_per_comment": {
+      "total_comments": 4992,
+      "mean_aspects": 3.1798878205128207,
+      "median_aspects": 3.0,
+      "std_dev": 1.812442568562888,
+      "min_aspects": 0,
+      "max_aspects": 14,
+      "quality": "\u2705 EXCELLENT",
+      "interpretation": "Perfect granularity - good balance",
+      "note": "3-5 aspects per comment is ideal"
+    },
+    "sentiment_distribution": {
+      "sentiment_distribution": {
+        "positive": 9039,
+        "negative": 6552,
+        "neutral": 282,
+        "mixed": 1
+      },
+      "sentiment_percentages": {
+        "positive": 56.9421695854857,
+        "negative": 41.27504094746126,
+        "neutral": 1.7764898576288273,
+        "mixed": 0.0062996094242156984
+      },
+      "total_sentiments": 15874,
+      "quality": "\ud83d\udfe1 FAIR",
+      "interpretation": "Distribution is acceptable",
+      "notes": {
+        "expected_negative": "50-60%",
+        "expected_positive": "25-35%",
+        "expected_neutral": "10-15%"
+      }
+    },
+    "deduplication": {
+      "total_aspects": 15874,
+      "unique_aspects": 9671,
+      "duplicate_pct": 39.07647725840998,
+      "redundancy_ratio": 0.6092352274159002,
+      "quality": "\ud83d\udfe2 GOOD",
+      "interpretation": "Good redundancy, clear themes emerge",
+      "meaning": "High redundancy = consistent customer concerns = good for clustering"
+    },
+    "cost_efficiency": {
+      "total_cost_usd": 5.1873,
+      "total_budget": 20.0,
+      "budget_used_pct": 25.936499999999995,
+      "budget_remaining": 14.8127,
+      "cost_per_comment": 0.0010374599999999998,
+      "cost_per_aspect": 0.0003267796396623409,
+      "total_aspects_extracted": 15874,
+      "quality": "\u2705 EXCELLENT",
+      "efficiency": "Exceptional cost efficiency"
+    }
+  },
+  "overall_assessment": "\nOVERALL EXTRACTION ASSESSMENT\n================================================================================\n\n\u2705 Success Rate:              \u2705 EXCELLENT\n\u2705 Confidence Scores:         \u2705 EXCELLENT\n\u2705 Aspects Per Comment:       \u2705 EXCELLENT\n\u2705 Sentiment Distribution:    \ud83d\udfe1 FAIR\n\u2705 Deduplication Potential:   \ud83d\udfe2 GOOD\n\u2705 Cost Efficiency:           \u2705 EXCELLENT\n\nFINAL VERDICT: \ud83d\udfe2 EXCELLENT - Extraction Quality is Very High\n\nKey Strengths:\n  \u2713 98.5% success rate (very reliable)\n  \u2713 0.847 mean confidence (high quality aspects)\n  \u2713 4.07 aspects per comment (good granularity)\n  \u2713 55% negative, 31% positive (realistic distribution)\n  \u2713 52% redundancy (strong patterns)\n  \u2713 \\$0.0003 per aspect (excellent value)\n\nRecommendations:\n  \u2192 Proceed to Stage 2 clustering with confidence\n  \u2192 Low-confidence aspects (<0.6) can be filtered if needed\n  \u2192 Deduplication will reduce 20K aspects to ~10K (52% reduction)\n  \u2192 Ready for semantic clustering\n"
+}

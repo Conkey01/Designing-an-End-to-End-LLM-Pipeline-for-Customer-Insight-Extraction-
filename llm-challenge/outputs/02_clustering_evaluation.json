@@ -1,0 +1,263 @@
+{
+  "timestamp": "2026-07-12T13:58:34.187616",
+  "clustering_method": "kmeans",
+  "clustering_metrics": {
+    "method": "kmeans",
+    "n_clusters": 38,
+    "silhouette_score": 0.06573469191789627,
+    "davies_bouldin_score": 3.160415368215915
+  },
+  "cluster_statistics": {
+    "num_clusters": 38,
+    "cluster_sizes": {
+      "min": 102,
+      "max": 752,
+      "mean": 254.5,
+      "median": 213.0
+    },
+    "cluster_size_distribution": {
+      "0": 102,
+      "1": 111,
+      "2": 118,
+      "3": 137,
+      "4": 137,
+      "5": 138,
+      "6": 147,
+      "7": 151,
+      "8": 158,
+      "9": 161,
+      "10": 166,
+      "11": 175,
+      "12": 180,
+      "13": 182,
+      "14": 190,
+      "15": 195,
+      "16": 198,
+      "17": 210,
+      "18": 212,
+      "19": 214,
+      "20": 222,
+      "21": 226,
+      "22": 234,
+      "23": 240,
+      "24": 251,
+      "25": 262,
+      "26": 284,
+      "27": 293,
+      "28": 314,
+      "29": 342,
+      "30": 361,
+      "31": 362,
+      "32": 391,
+      "33": 431,
+      "34": 472,
+      "35": 474,
+      "36": 478,
+      "37": 752
+    }
+  },
+  "sentiment_distribution": {
+    "15": {
+      "positive": 219,
+      "negative": 13,
+      "neutral": 2
+    },
+    "1": {
+      "positive": 90,
+      "negative": 70,
+      "neutral": 1
+    },
+    "18": {
+      "negative": 271,
+      "neutral": 8,
+      "positive": 35
+    },
+    "20": {
+      "negative": 158,
+      "positive": 16,
+      "neutral": 8
+    },
+    "37": {
+      "positive": 174,
+      "negative": 162,
+      "neutral": 5,
+      "mixed": 1
+    },
+    "36": {
+      "negative": 215,
+      "positive": 525,
+      "neutral": 12
+    },
+    "2": {
+      "negative": 153,
+      "positive": 39,
+      "neutral": 6
+    },
+    "5": {
+      "negative": 200,
+      "positive": 265,
+      "neutral": 9
+    },
+    "12": {
+      "negative": 94,
+      "positive": 6,
+      "neutral": 2
+    },
+    "26": {
+      "negative": 121,
+      "positive": 13,
+      "neutral": 3
+    },
+    "35": {
+      "negative": 173,
+      "positive": 51,
+      "neutral": 2
+    },
+    "17": {
+      "negative": 146,
+      "positive": 16,
+      "neutral": 4
+    },
+    "3": {
+      "negative": 169,
+      "positive": 257,
+      "neutral": 5
+    },
+    "28": {
+      "negative": 121,
+      "positive": 33,
+      "neutral": 4
+    },
+    "33": {
+      "positive": 177,
+      "negative": 105,
+      "neutral": 2
+    },
+    "27": {
+      "negative": 111,
+      "positive": 149,
+      "neutral": 2
+    },
+    "32": {
+      "negative": 83,
+      "positive": 127,
+      "neutral": 2
+    },
+    "11": {
+      "negative": 232,
+      "positive": 156,
+      "neutral": 3
+    },
+    "10": {
+      "negative": 61,
+      "positive": 146,
+      "neutral": 7
+    },
+    "9": {
+      "neutral": 7,
+      "positive": 50,
+      "negative": 61
+    },
+    "29": {
+      "negative": 277,
+      "positive": 182,
+      "neutral": 13
+    },
+    "14": {
+      "positive": 157,
+      "negative": 199,
+      "neutral": 5
+    },
+    "0": {
+      "positive": 91,
+      "negative": 44,
+      "neutral": 2
+    },
+    "8": {
+      "positive": 145,
+      "negative": 74,
+      "neutral": 3
+    },
+    "19": {
+      "negative": 125,
+      "positive": 223,
+      "neutral": 14
+    },
+    "31": {
+      "negative": 184,
+      "neutral": 3,
+      "positive": 3
+    },
+    "13": {
+      "negative": 70,
+      "positive": 107,
+      "neutral": 3
+    },
+    "4": {
+      "positive": 107,
+      "negative": 30,
+      "neutral": 1
+    },
+    "34": {
+      "positive": 93,
+      "negative": 191,
+      "neutral": 9
+    },
+    "16": {
+      "negative": 117,
+      "positive": 29,
+      "neutral": 5
+    },
+    "24": {
+      "negative": 49,
+      "positive": 159,
+      "neutral": 2
+    },
+    "25": {
+      "negative": 70,
+      "positive": 39,
+      "neutral": 2
+    },
+    "6": {
+      "negative": 317,
+      "positive": 146,
+      "neutral": 15
+    },
+    "7": {
+      "positive": 56,
+      "negative": 114,
+      "neutral": 5
+    },
+    "21": {
+      "negative": 78,
+      "positive": 65,
+      "neutral": 4
+    },
+    "22": {
+      "positive": 211,
+      "negative": 34,
+      "neutral": 6
+    },
+    "30": {
+      "negative": 70,
+      "positive": 116,
+      "neutral": 9
+    },
+    "23": {
+      "negative": 140,
+      "positive": 97,
+      "neutral": 3
+    }
+  },
+  "insights_generation": {
+    "total_clusters": 38,
+    "successful_insights": 38,
+    "failed_insights": 0,
+    "success_rate": 1.0
+  },
+  "quality_assessment": {
+    "coverage": 100.0,
+    "coherence": "Low",
+    "note": "Silhouette score > 0.5 indicates strong clustering, 0.3-0.5 is moderate, < 0.3 is weak"
+  }
+}
