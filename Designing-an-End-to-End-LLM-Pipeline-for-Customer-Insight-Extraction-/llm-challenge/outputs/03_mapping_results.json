@@ -1,0 +1,314 @@
+{
+  "metadata": {
+    "timestamp": "2026-07-13T00:49:06.986871",
+    "method": "full",
+    "total_clusters": 38,
+    "successful": 38
+  },
+  "mappings": {
+    "0": {
+      "cluster_id": 0,
+      "primary_theme": "Pricing & Fees",
+      "primary_category": "Company & Brand",
+      "primary_confidence": 0.98,
+      "reasoning": "The cluster explicitly focuses on fee structure transparency, hidden charges, overdraft practices, and premium subscription costs\u2014all core pricing and fee concerns. This is the most direct and unambiguous match to the available themes.",
+      "status": "success"
+    },
+    "1": {
+      "cluster_id": 1,
+      "primary_theme": "App Performance",
+      "primary_category": "Online Experience",
+      "primary_confidence": 0.85,
+      "reasoning": "The cluster's primary concern centers on digital channel reliability failures including app login, uptime, and functionality issues, which directly align with app performance problems. While customer support gaps are secondary, the core issue is the technical failure of digital banking services themselves.",
+      "status": "success"
+    },
+    "2": {
+      "cluster_id": 2,
+      "primary_theme": "Updates & Versions",
+      "primary_category": "Online Experience",
+      "primary_confidence": 0.95,
+      "reasoning": "The cluster directly addresses software update quality, stability issues post-deployment, and update frequency concerns, which are core aspects of the Updates & Versions theme. The feedback explicitly focuses on update-related problems rather than broader app performance or other service areas.",
+      "status": "success"
+    },
+    "3": {
+      "cluster_id": 3,
+      "primary_theme": "App Performance",
+      "primary_category": "Online Experience",
+      "primary_confidence": 0.95,
+      "reasoning": "The cluster explicitly centers on technical reliability gaps (app launching, loading, downloading failures) and fragmented cross-device performance issues, which are core App Performance concerns. While design is praised, the critical operational failures directly map to app performance reliability rather than design or feature completeness.",
+      "status": "success"
+    },
+    "4": {
+      "cluster_id": 4,
+      "primary_theme": "Core Banking Features",
+      "primary_category": "Product & Features",
+      "primary_confidence": 0.92,
+      "reasoning": "The cluster directly addresses spending tracking, categorization, expense monitoring, and budget management\u2014all fundamental banking features. The feedback on real-time visibility, analytics capabilities, and configuration options are core product functionality issues rather than account, UX, service, or brand concerns.",
+      "status": "success"
+    },
+    "5": {
+      "cluster_id": 5,
+      "primary_theme": "Trust & Security",
+      "primary_category": "Company & Brand",
+      "primary_confidence": 0.92,
+      "reasoning": "The cluster's core insight centers on a credibility crisis where customers distrust corporate integrity, ethics, and transparency despite positive frontline experiences. This directly maps to Trust & Security, which encompasses organizational trustworthiness and accountability\u2014the fundamental concern underlying all negative perceptions in this cluster.",
+      "status": "success"
+    },
+    "6": {
+      "cluster_id": 6,
+      "primary_theme": "Navigation & Design",
+      "primary_category": "Online Experience",
+      "primary_confidence": 0.85,
+      "reasoning": "The cluster's core issue centers on cumbersome, multi-step processes and system complexity that directly impact user workflow experience. Navigation & Design best captures how poorly structured interfaces and process flows create friction, though Account Access would also be relevant given the authentication focus.",
+      "status": "success"
+    },
+    "7": {
+      "cluster_id": 7,
+      "primary_theme": "Trust & Security",
+      "primary_category": "Company & Brand",
+      "primary_confidence": 0.92,
+      "reasoning": "The cluster directly addresses security implementation and customer trust, with the core issue being the gap between strong security foundations and poor execution affecting brand perception. While secondary usability concerns exist, the primary business impact centers on trust and security credibility.",
+      "status": "success"
+    },
+    "8": {
+      "cluster_id": 8,
+      "primary_theme": "Trust & Security",
+      "primary_category": "Company & Brand",
+      "primary_confidence": 0.85,
+      "reasoning": "The cluster's core issue centers on trust and transparency gaps regarding fund handling practices and institutional trustworthiness, despite positive feature functionality. While fund accessibility touches on Account Access, the dominant sentiment concern is about trust in how the company manages and controls customer funds, making Trust & Security the primary business theme.",
+      "status": "success"
+    },
+    "9": {
+      "cluster_id": 9,
+      "primary_theme": "Trust & Security",
+      "primary_category": "Company & Brand",
+      "primary_confidence": 0.85,
+      "reasoning": "The cluster's core issues around regulatory compliance, debt collection practices, mortgage mis-selling, and creditor transparency are fundamentally trust-related concerns that directly impact brand credibility. While operational gaps exist, the overarching problem is customer trust in the company's ethical practices and regulatory adherence, making this the primary business theme.",
+      "status": "success"
+    },
+    "10": {
+      "cluster_id": 10,
+      "primary_theme": "General Satisfaction",
+      "primary_category": "Company & Brand",
+      "primary_confidence": 0.75,
+      "reasoning": "The Service Quality Paradox fundamentally reflects a disconnect between overall brand promise and customer experience delivery\u2014customers are satisfied with products but dissatisfied with operational execution. This gap between marketing claims and actual performance is best captured at the Company & Brand level where customer perception of the organization as a whole is evaluated.",
+      "status": "success"
+    },
+    "11": {
+      "cluster_id": 11,
+      "primary_theme": "Response Time",
+      "primary_category": "Customer Service",
+      "primary_confidence": 0.85,
+      "reasoning": "While the cluster encompasses multiple service gaps, the most prominent and consistently mentioned frustration is operational inefficiency manifested through long wait times, slow response rates, and accessibility barriers. Response Time directly captures this core pain point, though Issue Resolution also applies to the secondary theme of resolution capability gaps.",
+      "status": "success"
+    },
+    "12": {
+      "cluster_id": 12,
+      "primary_theme": "App Performance",
+      "primary_category": "Online Experience",
+      "primary_confidence": 0.85,
+      "reasoning": "The cluster centers on persistent technical issues with session management, authentication reliability, and process performance (slow loading times, stability issues) that directly impact app functionality. While trust & security could apply, the primary complaint is operational performance of the authentication system rather than security concerns.",
+      "status": "success"
+    },
+    "13": {
+      "cluster_id": 13,
+      "primary_theme": "Trust & Security",
+      "primary_category": "Company & Brand",
+      "primary_confidence": 0.75,
+      "reasoning": "Reliability and stability are fundamental trust attributes that underpin customer confidence in a financial institution. While the cluster spans multiple operational touchpoints, the core issue is about trustworthiness and dependability of the service, making Trust & Security the most semantically appropriate theme that captures the essence of reliability perceptions.",
+      "status": "success"
+    },
+    "14": {
+      "cluster_id": 14,
+      "primary_theme": "Cards & Payments",
+      "primary_category": "Account Management",
+      "primary_confidence": 0.92,
+      "reasoning": "The cluster directly addresses payment system functionality, transaction processing, payment methods, and digital wallet integration\u2014all core aspects of the Cards & Payments theme. The high confidence reflects the explicit focus on payment operations and reliability across multiple payment types.",
+      "status": "success"
+    },
+    "15": {
+      "cluster_id": 15,
+      "primary_theme": "App Performance",
+      "primary_category": "Online Experience",
+      "primary_confidence": 0.85,
+      "reasoning": "The cluster's emphasis on ease of use, intuitive design, mobile convenience, and on-the-go functionality directly aligns with how well the app performs across different contexts and devices. While 'Core Banking Features' is secondary, the primary satisfaction drivers relate to the seamless digital experience enabled by strong app performance.",
+      "status": "success"
+    },
+    "16": {
+      "cluster_id": 16,
+      "primary_theme": "App Performance",
+      "primary_category": "Online Experience",
+      "primary_confidence": 0.85,
+      "reasoning": "Biometric authentication failures represent a core app performance issue affecting functionality across multiple devices and platforms. While security is mentioned positively, the cluster focuses on execution problems, reliability failures, and persistence through updates\u2014all hallmarks of application performance degradation rather than security architecture concerns.",
+      "status": "success"
+    },
+    "17": {
+      "cluster_id": 17,
+      "primary_theme": "App Performance",
+      "primary_category": "Online Experience",
+      "primary_confidence": 0.95,
+      "reasoning": "The cluster explicitly documents crashes, freezing, connectivity, and server performance issues across the app lifecycle, which are core app performance problems. While payment crashes touch on Cards & Payments, the root cause and majority of issues are technical performance-related rather than account/payment functionality.",
+      "status": "success"
+    },
+    "18": {
+      "cluster_id": 18,
+      "primary_theme": "Account Access",
+      "primary_category": "Account Management",
+      "primary_confidence": 0.95,
+      "reasoning": "The cluster directly describes login, sign-up, and authentication failures that prevent customers from accessing their accounts across platforms and devices. Account Access is the primary business theme addressing user ability to enter and authenticate into their accounts.",
+      "status": "success"
+    },
+    "19": {
+      "cluster_id": 19,
+      "primary_theme": "Cards & Payments",
+      "primary_category": "Account Management",
+      "primary_confidence": 0.85,
+      "reasoning": "The cluster is fundamentally about the card product lifecycle and management, which is the core focus of the Cards & Payments theme. While operational and digital integration issues are mentioned, they are secondary friction points around the primary card experience rather than the main business driver.",
+      "status": "success"
+    },
+    "20": {
+      "cluster_id": 20,
+      "primary_theme": "Account Access",
+      "primary_category": "Account Management",
+      "primary_confidence": 0.92,
+      "reasoning": "Identity verification is a critical gating mechanism for account access, and the cluster's focus on verification friction, failed processes, and access impediments directly maps to account access challenges. While trust & security is tangentially related, the core issue is customers being blocked from accessing their accounts due to verification failures.",
+      "status": "success"
+    },
+    "21": {
+      "cluster_id": 21,
+      "primary_theme": "Navigation & Design",
+      "primary_category": "Online Experience",
+      "primary_confidence": 0.92,
+      "reasoning": "The cluster's core issues center on display, organization, and UI/UX problems with how transactions are presented and accessed across the app and website. This directly aligns with Navigation & Design, which addresses how users interact with and find information through the interface, rather than the transaction processing functionality itself which works smoothly.",
+      "status": "success"
+    },
+    "22": {
+      "cluster_id": 22,
+      "primary_theme": "General Satisfaction",
+      "primary_category": "Company & Brand",
+      "primary_confidence": 0.85,
+      "reasoning": "The cluster primarily focuses on overall customer satisfaction with the product's quality, functionality, and recommendation likelihood, which directly aligns with General Satisfaction. While Product & Features is secondary, the emphasis on satisfaction outcomes rather than specific feature details makes Company & Brand the better fit.",
+      "status": "success"
+    },
+    "23": {
+      "cluster_id": 23,
+      "primary_theme": "Response Time",
+      "primary_category": "Customer Service",
+      "primary_confidence": 0.92,
+      "reasoning": "The cluster's core complaint centers on customers' inability to access support channels efficiently (wait times, availability, responsiveness) despite praising the quality of human staff. This directly aligns with the 'Response Time' theme, which captures the systematic delays and accessibility barriers across phone, chat, email, and in-app support infrastructure.",
+      "status": "success"
+    },
+    "24": {
+      "cluster_id": 24,
+      "primary_theme": "Core Banking Features",
+      "primary_category": "Product & Features",
+      "primary_confidence": 0.92,
+      "reasoning": "The cluster directly addresses multi-currency support, exchange rates, and international transaction capabilities\u2014all core banking features. While discoverability issues touch on navigation, the primary value and friction points stem from the currency exchange functionality itself rather than UI/UX presentation.",
+      "status": "success"
+    },
+    "25": {
+      "cluster_id": 25,
+      "primary_theme": "Response Time",
+      "primary_category": "Customer Service",
+      "primary_confidence": 0.75,
+      "reasoning": "The cluster's primary pain points\u2014long wait times, branch availability, and operational friction\u2014directly relate to service delivery speed and accessibility. While branch infrastructure isn't a perfect fit for any single theme, Response Time in Customer Service best captures the core customer frustration with operational delays and service accessibility barriers.",
+      "status": "success"
+    },
+    "26": {
+      "cluster_id": 26,
+      "primary_theme": "Updates & Versions",
+      "primary_category": "Online Experience",
+      "primary_confidence": 0.92,
+      "reasoning": "The cluster explicitly addresses compatibility failures across OS versions, device models, and app versions, with specific mention of broken support after updates and system upgrades. This directly aligns with the Updates & Versions theme which handles version compatibility and update-related issues.",
+      "status": "success"
+    },
+    "27": {
+      "cluster_id": 27,
+      "primary_theme": "App Performance",
+      "primary_category": "Online Experience",
+      "primary_confidence": 0.92,
+      "reasoning": "The cluster explicitly identifies frontend/UI performance, mobile app loading, and login speeds as major pain points with exceptionally high negative confidence scores. App Performance is the most direct and specific match for these technical platform performance issues affecting customer-facing touchpoints.",
+      "status": "success"
+    },
+    "28": {
+      "cluster_id": 28,
+      "primary_theme": "App Performance",
+      "primary_category": "Online Experience",
+      "primary_confidence": 0.85,
+      "reasoning": "The cluster focuses on bugs, technical errors, and error messaging which are core app performance issues. While issue resolution is mentioned, the primary complaint is about product quality and bug fixes rather than customer service responsiveness.",
+      "status": "success"
+    },
+    "29": {
+      "cluster_id": 29,
+      "primary_theme": "Account Access",
+      "primary_category": "Account Management",
+      "primary_confidence": 0.92,
+      "reasoning": "The cluster explicitly focuses on accessibility and usability barriers across the account lifecycle (creation, login, multi-account management), with customers struggling to effectively access and use account functionality despite appreciating the features themselves. This directly aligns with the Account Access theme, which is the primary pain point driving negative sentiment.",
+      "status": "success"
+    },
+    "30": {
+      "cluster_id": 30,
+      "primary_theme": "Navigation & Design",
+      "primary_category": "Online Experience",
+      "primary_confidence": 0.75,
+      "reasoning": "The cluster's primary pain point is discoverability and navigation failures preventing customers from finding and accessing existing features, making Navigation & Design the best fit. While Product & Features is secondary, the core issue is usability rather than the features themselves.",
+      "status": "success"
+    },
+    "31": {
+      "cluster_id": 31,
+      "primary_theme": "Account Access",
+      "primary_category": "Account Management",
+      "primary_confidence": 0.95,
+      "reasoning": "The cluster directly focuses on account access issues including blocking, freezing, locking, and closure processes, which is the core definition of the Account Access theme. The complaints about inability to access funds and accounts during security reviews align perfectly with this theme.",
+      "status": "success"
+    },
+    "32": {
+      "cluster_id": 32,
+      "primary_theme": "Core Banking Features",
+      "primary_category": "Product & Features",
+      "primary_confidence": 0.95,
+      "reasoning": "The cluster directly addresses the breadth of money transfer capabilities (domestic, international, peer-to-peer) and their operational functionality, which are core banking features. The positive sentiment around transfer speed and ease, combined with friction points in processing and limits, are fundamental feature performance issues rather than service, design, or account management concerns.",
+      "status": "success"
+    },
+    "33": {
+      "cluster_id": 33,
+      "primary_theme": "Navigation & Design",
+      "primary_category": "Online Experience",
+      "primary_confidence": 0.95,
+      "reasoning": "The cluster directly addresses UI/UX design issues, visual/interaction patterns, layout organization, and responsiveness across devices\u2014all core concerns of the Navigation & Design theme. This is the most precise match among available themes as it encompasses the disconnect between legacy and new design implementations.",
+      "status": "success"
+    },
+    "34": {
+      "cluster_id": 34,
+      "primary_theme": "Core Banking Features",
+      "primary_category": "Product & Features",
+      "primary_confidence": 0.92,
+      "reasoning": "The cluster explicitly focuses on core banking operations (payments, transfers, deposits, overdrafts, account management) with primary issues in execution reliability and process friction. While support deficiencies are mentioned, the overwhelming feedback concerns the functionality and usability of fundamental banking features themselves.",
+      "status": "success"
+    },
+    "35": {
+      "cluster_id": 35,
+      "primary_theme": "Updates & Versions",
+      "primary_category": "Online Experience",
+      "primary_confidence": 0.95,
+      "reasoning": "The cluster explicitly focuses on post-update degradation in stability, functionality, and performance, with direct complaints about mandatory updates and version compatibility issues. This is a perfect match for the Updates & Versions theme which directly addresses update-related customer experiences.",
+      "status": "success"
+    },
+    "36": {
+      "cluster_id": 36,
+      "primary_theme": "Trust & Security",
+      "primary_category": "Company & Brand",
+      "primary_confidence": 0.85,
+      "reasoning": "The cluster's core tension centers on the gap between excellent product experience and fundamental concerns about institutional trustworthiness, reliability, and ethical competence\u2014making Trust & Security the primary business theme, despite secondary strengths in digital product delivery.",
+      "status": "success"
+    },
+    "37": {
+      "cluster_id": 37,
+      "primary_theme": "App Performance",
+      "primary_category": "Online Experience",
+      "primary_confidence": 0.95,
+      "reasoning": "The cluster directly addresses app stability, crashes, lag, and performance degradation across versions and devices, which precisely aligns with the App Performance theme. The concerns about technical reliability and speed are the core focus of this feedback.",
+      "status": "success"
+    }
+  }
+}
