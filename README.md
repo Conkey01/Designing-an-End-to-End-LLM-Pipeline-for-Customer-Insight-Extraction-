@@ -78,6 +78,10 @@ src/evaluate_extraction.py - to evaluate the extraction step
 
 src/evaluate_clustering.py - to evaluate the clustering step
 
+src/map.py - to do the mapping step
+
+src/evaluate_mapping.py - to evaluate the mapping step
+
 
 outputs:
 
@@ -109,7 +113,11 @@ outputs/01_extraction_evaluation.json - evaluation results after the extraction 
 
 outputs/02_clustering_evaluation_detailed.json - evaluation results of the clustering step
 
+outputs/03_confidence_report.json - mappings confidence scores 
 
+outputs/03_theme_distribution.json - results of the mappings step
+
+outputs/03_mapping_results.json - results of the mappings step
 
 # Running the Pipeline
 
@@ -119,7 +127,7 @@ outputs/02_clustering_evaluation_detailed.json - evaluation results of the clust
 # Test on 10 comments
 python src/extract.py --test
 
-# Run on the full dataset
+# Run on the full dataset - if any run this one for the full pipeline
 python src/extract.py --full
 
 # Run both the test and full pipeline
@@ -135,7 +143,7 @@ python src/cluster.py --test
 # Test with visualization
 python src/cluster.py --test --viz
 
-# Full clustering pipeline
+# Full clustering pipeline - if any run this one for the full pipeline
 python src/cluster.py --full
 
 # Analyze existing results
@@ -145,7 +153,17 @@ python src/cluster.py --analyze
 ## 3. Theme Mapping
 
 ```bash
-python src/map.py
+# Semantic-only mapping
+python src/map.py --semantic
+
+# Semantic + selective LLM validation
+python src/map.py --validate
+
+# Full LLM-based mapping - if any run this for the full pipeline
+python src/map.py --full
+
+# Evaluate existing mapping results
+python src/map.py --evaluate 
 ```
 
 ## 4. Evaluation
@@ -305,9 +323,40 @@ Key Strengths:
 ## 3. Mapping
 
 ## Methods 
+For this task we can make a choice between using LLMs or semantic similarity or both (dependent on the terminal command we run from the pipeline). If we use both we first create embeddings for all 15 themes using sentence-transformers. Then for each cluster (we can embed the cluster summary to get semantic understanding) we compute semantic similarity (cosine similarity) to all themes and then return the top-3 matching themes with confidence scores (Claude can express uncertainty). Finally we Use Claude to select primary theme with reasoning, given a structured prompt similar to that in the extraction step but obviously for this task instead. We can alterntively just restrict ourselves to only using LLMs or only using semantic similarity instead aswell. 
 
 ## Evaluation
+A combination of semantic similarity and LLMs is fast, interpretable and cost efficient compared to finrtuning a large model/human annotation or a rule based/heuristic approach. The cost is now low because we are dealing with small numbers of clusters aswell rather than 5k comments 
 
 
 ## Results
 
+Run the following to get the evaluation metrics mentioned:
+
+```bash
+python src/evaluate_mapping.py
+```
+
+It will save the results to the outputs/03_mapping_evaluation_detailed.json file 
+
+Here is a small summary of the results for this section:
+
+Key Strengths:
+
+  Mean confidence 0.889 (EXCELLENT - very sure mappings)
+  
+  All 38/38 mappings >0.75 confidence (no uncertain mappings)
+  
+  10/15 themes used (good coverage, not forcing unused)
+  
+  All 5 categories represented (excellent breadth)
+  
+  Balanced category distribution (no concentration)
+  
+  70% of themes map multiple clusters (consistent patterns)
+  
+  All sample mappings make business sense (valid)
+  
+  Only \$0.03 per cluster (exceptional value)
+  
+  5.5% of budget used (plenty remaining)
